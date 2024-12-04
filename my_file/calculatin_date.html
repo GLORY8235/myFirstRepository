@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calcul_css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="https://docs.google.com/spreadsheets/d/1GzFNCmDNv96sBZhQ4JXYsQKLLoW-Xvur41ofjfabEdA/edit?usp=sharing ">
+    <title>Document</title>
+</head>
+<body>
+<div class="notification"></div>
+<div class="notifications">
+    <!-- <div class="show"></div> -->
+</div>
+
+    <div class="commingson">
+        <div class="commingcome">
+            <div class="cominggone">
+                <h1>
+                    day <span class="dysR">00</span>
+                    hour <span class="hysR">00</span>
+                    minutes <span class="mysR">00</span>
+                    second <span class="smysR">0bb 0</span>
+                    
+                </h1>
+            </div>
+            <div class="comingtwo">
+                <span class="rocket ">
+                    <i class="fas fa-rocket fa-10x"></i>
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+<div class="wrapcalculator">
+    <div id="calculator">
+        <input id="display" readonly>
+        <div id="keys">
+            <button onclick="appendTodisplay('+')" class="operator_btn">+</button>
+            <button onclick="appendTodisplay('7')">7</button>
+            <button onclick="appendTodisplay('8')">8</button>
+            <button onclick="appendTodisplay('9')">9</button>
+            <button onclick="appendTodisplay('-')"  class="operator_btn">-</button>
+            <button onclick="appendTodisplay('4')">4</button>
+            <button onclick="appendTodisplay('5')">5</button>
+            <button onclick="appendTodisplay('6')">6</button>
+            <button onclick="appendTodisplay('*')" class="operator_btn">*</button>
+            <button onclick="appendTodisplay('1')">1</button>
+            <button onclick="appendTodisplay('2')">2</button>
+            <button onclick="appendTodisplay('3')">3</button>
+            <button onclick="appendTodisplay('/')"  class="operator_btn">/</button>
+            <button onclick="appendTodisplay('0')">0</button>
+            <button onclick="appendTodisplay('.')">.</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="clearDisplay()"  class="operator_btn">c</button>
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- <form id="searchForm" style="display: inline-block; position: relative;">  
+        <input type="text" id="searchInput" name="search" placeholder="Search..." style="padding: 10px; border-radius: 4px; border: 1px solid #ccc;">  
+        <button type="submit" style="position: absolute; right: 0; top: 0; background: #4267B2; color: white; border: none; padding: 10px 15px; border-radius: 0 4px 4px 0;">Search</button>  
+      </form>   -->
+
+
+    <!-- my project -->
+    <!-- <i class="fa-brands fa-facebook-f faceb"></i>   -->
+     
+    <!-- <form id="searchForm">  
+        <i class="fa-solid fa-magnifying-glass SOLID"></i>  
+        <input type="text" id="searchInput" name="search" placeholder="Search..." required>  
+    </form>  -->
+
+
+
+    <div class="container">
+        <div class="wrapface">
+            <UL class="facebook">
+            <span class="span">
+                 <i class="fa-brands fa-facebook-f fa-2x faceb"></i>  
+            </span>
+
+            <span class="spans">
+                  
+         <form id="searchForm">  
+        <i class="fa-solid fa-magnifying-glass SOLID"></i>  
+        <input type="text" id="searchInput" name="search" placeholder="Search..." required>  
+        </form> 
+            </span>
+            </UL>
+        </div>
+        <div class="wrapfaces">
+            <UL class="uls">
+                <I class="lis bell">
+                    <a href="http://" class="fas fa-home hove_line "></a>
+                    <i class="position">15+</i>
+
+                </I>
+
+                <I class="lis">
+                    <a href="ADDfrient.html" class="fa-solid fa-user-group href"></a>
+                    <i class="position">5</i>
+
+                </I>
+
+                <I class="lis">
+                    <a href="massage_sent.html"class="fa-brands fa-discord href"></a>
+                </I>
+            </UL>
+        </div>
+        <div class="wrapfacese">
+            <UL class="ulss">
+                <I class="lissed">
+                    <a href="http://" class="home">fine friend</a>
+                </I>
+                <i class="fa-sharp-duotone fa-solid fa-braille lis"></i>
+                <span class="fa-brands fa-facebook-messenger lis bell">
+                    <i class="position">15+</i>
+
+                </span>
+                <span class="fa-sharp-duotone fa-solid fa-bell lis  bell bb">
+                    <i class="position">15+</i>
+                </span>
+                <I class=" lis"><img class="imgs" src="C:\Users\USER\Pictures\Camera Roll/IMG-20240824-WA0018.jpg" alt=""></I>
+            </UL>
+        </div>
+    </div>
+
+
+
+    <!-- main styling -->
+
+    <div class="wrap_container">
+
+        <div class="share_container">
+            <div class="wrap_1">
+                <ul class="icons">
+                    <i class="fa-sharp-duotone fa-solid fa-user-group"></i>
+                    <li>frends (12 online)</li>
+                </ul>
+                <ul class="icons">
+                    <i class="fa-sharp-duotone fa-solid fa-clock"></i>
+                    <li>memories</li>
+                </ul>
+                <ul class="icons">
+                    <i class="fa-sharp-duotone fa-solid fa-shield-halved"></i>
+                   
+                    <a href="landing_page.html" target="_blank" rel="noopener noreferrer">seved</a>
+                </ul>
+                <ul class="icons">
+                    <i class="fa-sharp-duotone fa-solid fa-user-group"></i>
+                    <li>groups</li>
+                </ul>
+                <ul class="icons">
+                    <i class="fa-brands fa-youtube"></i>
+                    <li>video</li>
+                </ul>
+                <ul class="icons">
+                    <i class="fa-sharp-duotone fa-solid fa-shop-lock"></i>
+                    <li>maketplace</li>
+                </ul>
+                <ul class="icons">
+                    <i class="fa-sharp-duotone fa-solid fa-truck-clock"></i>
+                    <li>feeds</li>
+                </ul>
+                <ul class="icons">
+                    <i class="fa-sharp-duotone fa-solid fa-chevron-down"></i>
+                    <li>see more</li>
+                    
+                </ul>
+                <ul class="icons">
+                <hr>
+
+                </ul>
+            </div>
+
+            <div class="wrap_2">
+                <UL class="wrap_123">
+                   <li>your shortcuts</li>
+                </UL>
+
+                <UL class="wrap_123">
+                    <li class="imgeds"><img class="img" src="C:\Users\USER\Pictures\Camera Roll/WIN_20240923_15_26_38_Pro.jpg" alt=""></li>
+                    <li>c s s ndukpoise</li>
+                 </UL>
+                 <UL class="wrap_123">
+                    <li class="imgeds"><img class="img" src="C:\Users\USER\Pictures\Camera Roll/WIN_20240923_15_26_38_Pro.jpg" alt=""></li>
+
+                    <li>human hair and wigs</li>
+                 </UL>
+                 <UL class="wrap_123">
+                    <li class="imgeds"><img class="img" src="C:\Users\USER\Pictures\Camera Roll/WIN_20240923_15_26_38_Pro.jpg" alt=""></li>
+
+                    <li>blessing tv content creator grops</li>
+                 </UL>
+                 <UL class="wrap_123">
+                    <li class="imgeds"><img class="img" src="C:\Users\USER\Pictures\Camera Roll/WIN_20240923_15_26_38_Pro.jpg" alt=""></li>
+
+                    <li>my company</li>
+                 </UL>
+            </div>
+        </div>
+        <!-- middle styling -->
+        <div class="share_containers">
+            <div class="SHAEE_IN_THREE ">
+                <div class="share4">
+                    <div class="_2">
+                        <i><img class="my_img" src="C:\Users\USER\Pictures\Camera Roll/IMG-20240824-WA0008(1).jpg" alt=""></i>
+                        <!-- <i class="add_position"></i> -->
+                    </div>
+                    <div class="_3">
+                        <span class="_5">create story</span>
+                        <i class="add_position">+</i>
+
+                    </div>
+                </div>
+                <div class="share4">
+                    <div class="_wrap">
+                        <i><img class="img1" src="C:\Users\USER\Pictures\Saved Pictures/1699459032013.jpg" alt=""></i>
+                        <i class="add_positionses">3</i>
+
+                    </div>
+                </div>
+                <div class="share4">
+                    <div class="_wrap">
+                        <i><img class="img1" src="C:\Users\USER\Pictures\Camera Roll/IMG-20240824-WA0018.jpg" alt=""></i>
+                        <i class="add_positionses">3</i>
+                        <i class="add_positions">jdhgftaayguhjkl';\</i>
+
+                    </div>
+                </div>
+                <div class="share4">
+                    <div class="_wrap">
+                        <i><img class="img1" src="C:\Users\USER\Pictures\Saved Pictures/1718078400495.jpg" alt=""></i>
+                        <i class="add_positionses">3</i>
+
+                    </div>
+                </div>
+                <div class="share4">
+
+                    <div class="_wrap">
+                        <i><img class="img1" src="C:\Users\USER\Pictures\Saved Pictures/1704895267159.jpg" alt=""></i>
+                        <i class="add_positionses">3</i>
+
+                    </div>
+
+
+
+                    <!-- <div class="wrap">
+                        <i><img class="img1" src="C:\Users\USER\Pictures\Saved Pictures/1718078400495.jpg" alt=""></i>
+                        
+                        <i class="add_positionses">3</i>
+
+                    </div> -->
+                </div>
+            </div>
+
+
+            <div class="SHAEE_IN_THREE1">   
+                <div class="like_share1">
+                    <div class="share_like1"></div>
+                    <div class="share_like2"></div>
+                </div>
+
+                <div class="like_share2"></div>
+                <div class="like_share3"></div>
+            </div>
+
+
+
+            <div class="SHAEE_IN_THREE2"></div>
+        </div>
+
+
+        <div class="share_container"></div>
+    </div>
+
+
+
+
+
+
+
+<script src="calcul_java.js"></script>
+</body>
+</html>

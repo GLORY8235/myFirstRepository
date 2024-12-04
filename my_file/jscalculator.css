@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.5s linear ;
+}
+
+.calculatorWrapper{
+    background-color: orange;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.calculatorWrapper .calculatorBody{
+    width: 600px;
+    height: 80%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.8);
+    padding: 10px;
+}
+
+.calculatorWrapper .calculatorBody .calculatorScreeninput{
+    width:100% ;
+    height: 150px;
+
+}
+
+.mainScreen{
+    background-color: teal;
+    height: 80%;
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.mainScreen .typeScreen{
+    height: 60px;
+    width: 100%;
+    color: white;
+    text-align: right;
+    font-family: sans-serif;
+    font-size: 25px;
+    }
+
+.calculatorBtn{
+    height: 70%;
+    border: 2px solid red;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.calculatorBtn .btnWrapper{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    border: 2px solid green;
+    flex-wrap: wrap;
+    
+}
+
+.calculatorBtn .btnWrapper button:not(disabled){
+    width: 100px;
+    height: 50px;
+    background-color: blue;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+       -6px  -6px 10px -1px rgba(255, 255, 255, 0.7)
+}
+
+.calculatorBtn .btnWrapper button:not(disabled):active{
+  opacity: 0.3;
+  background-color: silver;
+}
+
+.calculatorBtn .btnWrapper button:disabled{
+    opacity: 0.6;
+    cursor: no-drop;
+
+}
+
+.runAction{
+    width: 90% !important;
+}
+
+.Off{
+    background-color: darkred !important;
+}
+
+
+
+.mainScreen .resultAppear{
+  font-size: 20px;
+  color: white;
+  font-family: sans-serif;
+  font-weight: 600;
+  text-align: right;
+}
+
+.calculatorName{
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: right;
+    font-style: oblique;
+
+}
