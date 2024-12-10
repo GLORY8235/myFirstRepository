@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.img{
+    width: 100%;
+    height: 100px;
+    background-image: cover;
+}
+.imgs{
+    background-image: -moz-radial-gradient(2);
+    width: 500px;
+    height: 300px;
+    
+}
+
+
+.navbar {
+    background-image: url('C:/Users/USER/Downloads/Unicon _ Design-Driven Multipurpose Theme.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px; /* Adjust the height as needed */
+    position: relative;
+    /* background: deepgreen; */
+}
+.navbar .container-fluid{
+    /* background: rgba(0, 0, 0, 0.5); Optional: Add semi-transparent overlay for better contrast */
+    color: black !important; /* Ensure text is visible over the image */
+    position: absolute;
+    height: 20%;
+    /* background: rgba(128, 128, 128) ; */
+    top: -6px;
+    /* z-index: 3; */
+}
+.navbar .container-fluid:hover{
+    background: rgba(0, 0, 0, 0.5); /* Optional: Add semi-transparent overlay for better contrast */
+    background: white; /*.navbar .nav-link color: white; /* Ensure navigation links are visible */
+    height: 50%;
+    color: #ffd700;
+}
+.navbar .nav-link:hover {
+    color: #ffd700; /* Optional: Add a hover effect */
+}
