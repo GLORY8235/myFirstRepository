@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="confirm.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Facebook</a>
+
+            <div class="container">
+                <!-- Search Form -->
+                <form class="d-flex search-bar">
+                    <input id="searchInput" class="form-control me-2" type="search" placeholder="Search names" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+        
+                <!-- List of Names -->
+                <ul id="namesList" class="list-group">
+                    <li class="list-group-item">Prety Ita</li>
+                    <li class="list-group-item">John Doe</li>
+                    <li class="list-group-item">Jane Smith</li>
+                    <li class="list-group-item">Alice Johnson</li>
+                    <!-- Add more names as needed -->
+                </ul>
+            </div>
+            <!-- Search bar -->
+            <!-- <form class="d-flex ms-auto me-3 search-bar">
+                <input class="form-control" type="search" placeholder="Search Facebook" aria-label="Search">
+                <button class="btn btn-light ms-2" type="submit">Search</button>
+            </form> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Friends</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Notifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Profile</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 sidebar d-none d-md-block">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a href="#">News Feed</a></li>
+                    <li class="list-group-item"><a href="#">Messages</a></li>
+                    <li class="list-group-item"><a href="#">Groups</a></li>
+                    <li class="list-group-item"><a href="#">Marketplace</a></li>
+                    <li class="list-group-item"><a href="#">Events</a></li>
+                </ul>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-6">
+                <div class="post-box">
+                    <h5>What’s on your mind?</h5>
+                    <textarea class="post-textarea" id="postInput" placeholder="Share your thoughts..."></textarea>
+                    <button class="post-btn" id="postButton">Post</button>
+                </div>
+        
+                <!-- Section to display posted content -->
+                <div id="postsSection">
+                    <h6>Posts</h6>
+                </div>
+
+                <!-- Example Post -->
+                <!-- <div class="feed">
+                    <h6>User Name</h6>
+                    <p>This is an example post. Add your content here!</p>
+                    <button class="btn btn-light">Like</button>
+                    <button class="btn btn-light">Comment</button>
+                </div> -->
+                <div class="container mt-5">
+                    <!-- Example Post -->
+                    <div class="feed">
+                        <h6>User Name</h6>
+                        <p>Creating styles for each screen size is time-consuming, resource-consuming, and expensive. Even if 
+                        you manage to cover all the breakpoints in the World, this will seriously overload the website and 
+                        ipso facto decrease performance that drastically worsens conversions and user’s engagement with the 
+                         brand, to say nothing about investing lots of money without decent ROI. So, how can entrepreneurs 
+                         avoid this fate and successfully meet the fast-changing realms of digital expanses? The answer is 
+                        simple – adopt responsive design. Investing in a website whose pages are responsive and accessible,
+                         regardless of the browser, platform, or screen that your reader must use to access, is the only way 
+                         to stay afloat these days. Responsive web design is no longer a tendency; it is a standard that we 
+                          need to enforce to make the web a better place. Let us take a moment to walk through the essentials 
+                           of a responsive website to understand better why it is important and what you need to do to ensure 
+                          your site responds to the device’s 
+                         capabilities it is viewed on perfectly to let users enjoy the excellent visual experience.</p>
+                        <!-- Like and Comment Buttons -->
+                        <button class="btn like-btn" id="likeButton">Like</button>
+                        <button class="btn btn-light" id="commentButton">Comment</button>
+            
+                        <!-- Comment Section -->
+                        <div class="comment-section d-none" id="commentSection">
+                            <textarea class="form-control comment-box" placeholder="Write a comment..." id="commentBox"></textarea>
+                            <button class="btn btn-primary mt-2" id="postCommentButton">Post Comment</button>
+                            <ul class="list-unstyled mt-3" id="commentList"></ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                
+            
+            </div>
+
+            <!-- Right Sidebar -->
+            <!-- <div class="container mt-5"> -->
+                <div class="col-md-3 d-none d-md-block">
+                    <div class="friend-suggestion">
+                        <h6>Friend Suggestions</h6>
+                        <ul class="list-unstyled">
+                            <li>
+                                <span>
+                                    <strong>John Doe</strong>
+                                </span>
+                                <span>
+                                    <button class="btn-add" onclick="addFriend(this)">Add Friend</button>
+                                    <button class="btn-delete" onclick="deleteFriend(this)">Delete</button>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <strong>Jane Smith</strong>
+                                </span>
+                                <span>
+                                    <button class="btn-add" onclick="addFriend(this)">Add Friend</button>
+                                    <button class="btn-delete" onclick="deleteFriend(this)">Delete</button>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <strong>Jane Smith</strong>
+                                </span>
+                                <span>
+                                    <button class="btn-add" onclick="addFriend(this)">Add Friend</button>
+                                    <button class="btn-delete" onclick="deleteFriend(this)">Delete</button>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <strong>Jane Smith</strong>
+                                </span>
+                                <span>
+                                    <button class="btn-add" onclick="addFriend(this)">Add Friend</button>
+                                    <button class="btn-delete" onclick="deleteFriend(this)">Delete</button>
+                                </span>
+                            </li> <li>
+                                <span>
+                                    <strong>Nsikan obong</strong>
+                                </span>
+                                <span>
+                                    <button class="btn-add" onclick="addFriend(this)">Add Friend</button>
+                                    <button class="btn-delete" onclick="deleteFriend(this)">Delete</button>
+                                </span>
+                            </li> <li>
+                                <span>
+                                    <strong>okon ita</strong>
+                                </span>
+                                <span>
+                                    <button class="btn-add" onclick="addFriend(this)">Add Friend</button>
+                                    <button class="btn-delete" onclick="deleteFriend(this)">Delete</button>
+                                </span>
+                            </li> <li>
+                                <span>
+                                    <strong>mary isong </strong>
+                                </span>
+                                <span>
+                                    <button class="btn-add" onclick="addFriend(this)">Add Friend</button>
+                                    <button class="btn-delete" onclick="deleteFriend(this)">Delete</button>
+                                </span>
+                            </li> <li>
+                                <span>
+                                    <strong>prety oko</strong>
+                                </span>
+                                <span>
+                                    <button class="btn-add" onclick="addFriend(this)">Add Friend</button>
+                                    <button class="btn-delete" onclick="deleteFriend(this)">Delete</button>
+                                </span>
+                            </li> 
+                            <li>
+                                <span>
+                                    <strong>Smith Girl</strong>
+                                </span>
+                                <span>
+                                    <button class="btn-add" onclick="addFriend(this)">Add Friend</button>
+                                    <button class="btn-delete" onclick="deleteFriend(this)">Delete</button>
+                                </span>
+                            </li>
+                             <li>
+                                <span>
+                                    <strong>jackson Tchouncha </strong>
+                                </span>
+                                <span>
+                                    <button class="btn-add" onclick="addFriend(this)">Add Friend</button>
+                                    <button class="btn-delete" onclick="deleteFriend(this)">Delete</button>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <strong>mercy Tchouncha</strong>
+                                </span>
+                                <span>
+                                    <button class="btn-add" onclick="addFriend(this)">Add Friend</button>
+                                    <button class="btn-delete" onclick="deleteFriend(this)">Delete</button>
+                                </span>
+                            </li> 
+                            <li>
+                                <span>
+                                    <strong>mourice Tchouncha</strong>
+                                </span>
+                                <span>
+                                    <button class="btn-add" onclick="addFriend(this)">Add Friend</button>
+                                    <button class="btn-delete" onclick="deleteFriend(this)">Delete</button>
+                                </span>
+                            </li>
+                             <li>
+                                <span>
+                                    <strong>Glory Mosses</strong>
+                                </span>
+                                <span>
+                                    <button class="btn-add" onclick="addFriend(this)">Add Friend</button>
+                                    <button class="btn-delete" onclick="deleteFriend(this)">Delete</button>
+                                </span>
+                            </li>
+                             <li>
+                                <span>
+                                    <strong>nice boy</strong>
+                                </span>
+                                <span>
+                                    <button class="btn-add" onclick="addFriend(this)">Add Friend</button>
+                                    <button class="btn-delete" onclick="deleteFriend(this)">Delete</button>
+                                </span>
+                            </li> 
+                            <li>
+                                <span>
+                                    <strong>Glory Michael</strong>
+                                </span>
+                                <span>
+                                    <button class="btn-add" onclick="addFriend(this)">Add Friend</button>
+                                    <button class="btn-delete" onclick="deleteFriend(this)">Delete</button>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                <!-- </div> -->
+            </div>
+            
+            <!-- <div class="col-md-3 d-none d-md-block">
+                <div class="friend-suggestion">
+                    <h6>Friend Suggestions</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <strong>John Doe</strong>
+                            <button class="btn btn-primary btn-sm ms-2">Add Friend</button>
+                            <button class="btn btn-primary btn-sm ms-2">delete</button>
+                            
+
+                        </li>
+                        <li>
+                            <strong>Jane Smith</strong>
+                            <button class="btn btn-primary btn-sm ms-2">Add Friend</button>
+                            <button class="btn btn-primary btn-sm ms-2">delete </button>
+                        </li>
+                    </ul>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--     
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Facebook</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Friends</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Notifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Profile</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <!-- <div class="col-md-3 sidebar d-none d-md-block">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a href="#">News Feed</a></li>
+                    <li class="list-group-item"><a href="#">Messages</a></li>
+                    <li class="list-group-item"><a href="#">Groups</a></li>
+                    <li class="list-group-item"><a href="#">Marketplace</a></li>
+                    <li class="list-group-item"><a href="#">Events</a></li>
+                </ul>
+            </div> -->
+
+            <!-- Main Content -->
+            <!-- <div class="col-md-6">
+                <div class="feed">
+                    <h5>Create Post</h5>
+                    <textarea class="form-control" rows="3" placeholder="What's on your mind?"></textarea>
+                    <button class="btn btn-primary mt-2">Post</button>
+                </div>
+
+                <!-- Example Post -->
+                <!-- <div class="feed">
+                    <h6>User Name</h6>
+                    <p>This is an example post. Add your content here!</p>
+                    <button class="btn btn-light">Like</button>
+                    <button class="btn btn-light">Comment</button>
+                </div>
+            </div>
+
+            <!-- Right Sidebar -->
+            <!-- <div class="col-md-3 d-none d-md-block">
+                <div class="friend-suggestion">
+                    <h6>Friend Suggestions</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <strong>John Doe</strong>
+                            <button class="btn btn-primary btn-sm ms-2">Add Friend</button>
+                        </li>
+                        <li>
+                            <strong>Jane Smith</strong>
+                            <button class="btn btn-primary btn-sm ms-2">Add Friend</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div> --> 
+
+ 
+
+
+    <script src="calcul_java.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body><script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>

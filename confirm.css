@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+        body {
+            background-color: #f0f2f5;
+        }
+
+        .navbar {
+            background-color: #4267B2; /* Facebook blue */
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: white !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: white !important;
+        }
+
+        .search-bar {
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .sidebar {
+            background-color: white;
+            height: 100vh;
+            border-right: 1px solid #ccc;
+        }
+
+        .feed {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .like-btn {
+            background-color: #f0f0f0;
+            color: black;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .like-btn.liked {
+            background-color: #4267B2; /* Facebook blue */
+            color: white;
+        }
+           /* Comment section styling */
+           .comment-section {
+            margin-top: 10px;
+        }
+        .comment-box {
+            width: 100%;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .friend-suggestion {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .post-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .post-textarea {
+            resize: none;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .post-btn:hover {
+            background-color: #365899;
+            transform: scale(1.05);
+        }
+          /* Posted content styling */
+          .posted-content {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f0f2f5;
+            font-size: 16px;
+        }
+        .post-btn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4267B2; /* Facebook blue */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+
+        .btn-add {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-add:hover {
+            background-color: #45a049;
+        }
+
+        .btn-delete {
+            background-color: #f44336; /* Red */
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-delete:hover {
+            background-color: #d32f2f;
+        }
+
+        /* List styling */
+        .friend-suggestion ul {
+            padding: 0;
+        }
+
+        .friend-suggestion li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        strong{
+            cursor: pointer;
+        }
+        .search-bar {
+            max-width: 500px;
+            width: 100%;
+            margin: 20px auto;
+        }
